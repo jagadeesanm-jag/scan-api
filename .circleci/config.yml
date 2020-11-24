@@ -14,4 +14,4 @@ workflows:
           failure_criteria_low_severity: 3
           failure_criteria_operator: and
           tags: 'env:development, team:devOps'
-      - docker_safe_build
+      
