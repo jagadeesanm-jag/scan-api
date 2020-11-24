@@ -20,5 +20,5 @@ workflows:
           templates_directory_path:  ./tf12_with_issues
           tags: "svc:github.com"
           reports: csv,junit
-      - docker_safe_build
+
       
