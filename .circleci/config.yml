@@ -1,17 +1,24 @@
 version: 2.1
 orbs:
-  prisma: prisma_cloud/devops_security@2.2.0
+  pcs: pcs_sl_dev/devops_security@dev:first
+
+jobs:
+  docker_safe_build:
+    executor: pcs/compute
+    steps:
+      - checkout
+      - run: 'docker pull nginx'
+      - pcs/scan_image:
+          prisma_cloud_compute_url: https://us-east1.cloud.twistlock.com/app0panwdev-1234
+          image: nginx 
+          reports: none 
 workflows:
   scan:
     jobs:
-      - prisma/iac_scan:
+      - pcs/scan_iac:
           prisma_cloud_api_url: https://api2slqa.k8sdev.prismacloud.io/
-          templates_directory_path: ./tf12_with_issues
-          access_key: PC_ACCESS_KEY
-          secret_key: PC_SECRET_KEY
-          failure_criteria_high_severity: 1
-          failure_criteria_medium_severity: 2
-          failure_criteria_low_severity: 3
-          failure_criteria_operator: and
-          tags: 'env:development, team:devOps'
+          templates_directory_path:  ./tf12_with_issues
+          tags: "svc:github.com"
+          reports: csv,junit
+      - docker_safe_build
       
