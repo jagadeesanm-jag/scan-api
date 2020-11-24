@@ -5,11 +5,11 @@ workflows:
   scan:
     jobs:
       - prisma/iac_scan:
-          prisma_cloud_api_url: https://api2slqa.k8sdev.prismacloud.io/
-          access_key: 269ee029-9a97-4ad2-8662-185708b68e1a
-          secret_key: nbO6veA++xRaOqHWanEWx52bJIg=
+          prisma_cloud_api_url: <prisma cloud api url>
+          access_key: PC_ACCESS_KEY
+          secret_key: PC_SECRET_KEY
           failure_criteria_high_severity: 1
           failure_criteria_medium_severity: 2
           failure_criteria_low_severity: 3
           failure_criteria_operator: and
-          tags: 'circleCI:development, circleCITeam:devOps'
+          tags: 'env:development, team:devOps'
