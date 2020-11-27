@@ -6,7 +6,7 @@ phases:
       - pcs_iac_repo_scan
 reports:
   iac-reports:
-  files:
-    - report/iac_scan/results.xml
-  file-format: JUNITXML
+    files:
+      - report/iac_scan/results.xml
+    file-format: JUNITXML
   
