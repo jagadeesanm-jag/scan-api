@@ -16,7 +16,7 @@ workflows:
   scan:
     jobs:
       - pcs/scan_iac:
-          prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
+          prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io/
           templates_directory_path:  ./tf12_with_issues
           tags: "svc:github.com"
           reports: csv,junit
