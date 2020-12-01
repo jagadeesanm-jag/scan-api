@@ -1,5 +1,5 @@
 
-template_type: CFT
+template_type: k8s
 
 tags:
 - Org:Engineering
