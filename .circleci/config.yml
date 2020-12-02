@@ -19,6 +19,8 @@ workflows:
           prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
           templates_directory_path:  ./
           failure_criteria_high_severity: 1
+          failure_criteria_medium_severity: 2
+          failure_criteria_low_severity: 3
           prisma_cloud_tags: "env:devteam,env:devops"
           reports: csv,junit
 
