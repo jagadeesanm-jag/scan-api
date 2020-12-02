@@ -18,6 +18,7 @@ workflows:
       - pcs/scan_iac:
           prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
           templates_directory_path:  ./
+          failure_criteria_high_severity: 1
           prisma_cloud_tags: "env:devteam,env:devops"
           reports: csv,junit
 
