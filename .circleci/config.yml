@@ -19,7 +19,7 @@ workflows:
           prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
           templates_directory_path: ./tf11
           prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
-          prisma_cloud_tags: "env:A\nB"
+          prisma_cloud_tags: "env1:A,env2:B,env3:C,env4:D,env5:E,env6:F,env7:G,env8:H,env9:I,env10:J,env11:K,env12:L,env13:M,env14:N,env15:O,env16:P,env17:Q,env18:R,env19:S,env20:T,env21:U,env22:V,env23:W,env24:X,env25:Y,env26:Z"
           reports: csv,junit
 
       
