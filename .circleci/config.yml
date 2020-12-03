@@ -16,9 +16,10 @@ workflows:
   scan:
     jobs:
       - pcs/scan_iac:
-          prisma_cloud_api_url: https://api2slqa.k8sdev.prismacloud.io/
-          templates_directory_path:  ./tf12_with_issues
-          tags: "svc:github.com"
+          prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
+          templates_directory_path: ./tf12_fixes_issues
+          prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
+          prisma_cloud_tags: "env:A\nB"
           reports: csv,junit
 
       

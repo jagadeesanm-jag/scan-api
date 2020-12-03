@@ -1,6 +1,8 @@
 
 template_type: TF
+template_version: 0.9
 
 tags:
 - Org:Engineering
 - Team:Shift_Left
+- env:SecurityAudit
