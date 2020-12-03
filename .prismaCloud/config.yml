@@ -3,9 +3,9 @@ template_type: TF
 template_version: 0.11
 template_parameters:
 variables:
-operatingsystem : "Hello\nconnected"
-version: 1.0
-compiler: "Terraform\t\tlatest" 
+- operatingsystem : "Helloconnected"
+- version: 1
+- compiler: "Terraformlatest" 
 
 tags:
 - Org:Engineering
