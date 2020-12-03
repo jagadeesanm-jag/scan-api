@@ -1,0 +1,47 @@
+[
+  {
+    "request": {
+      "headers": {
+        "terraform-011-parameters": "[{\"root-module\":\"aws_two_tier/\"}]",
+        "terraform-version": "0.11"
+      },
+      "templateFile": "tf11/aws_two_tier.zip"
+    },
+    "response": {
+      "expected": {
+        "status_code": 200,
+        "resultFile": "tf11/aws_two_tier.json"
+      }
+    }
+  },
+    {
+    "request": {
+      "headers": {
+        "terraform-011-parameters": "[{\"root-module\":\"lambda-file-systems/\"}]",
+        "terraform-version": "0.11"
+      },
+      "templateFile": "tf11/lambda-file-systems.zip"
+    },
+    "response": {
+      "expected": {
+        "status_code": 200,
+        "resultFile": "tf11/lambda-file-systems.json"
+      }
+    }
+  },
+  {
+    "request": {
+      "headers": {
+        "terraform-011-parameters": "[{\"root-module\":\"s3-api-gateway-integration/\"}]",
+        "terraform-version": "0.11"
+      },
+      "templateFile": "tf11/s3-api-gateway-integration.zip"
+    },
+    "response": {
+      "expected": {
+        "status_code": 200,
+        "resultFile": "tf11/s3-api-gateway-integration.json"
+      }
+    }
+  }
+]
