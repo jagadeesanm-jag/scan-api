@@ -1,9 +1,5 @@
 
 template_type: TF
-template_version: 0.11
-
-variable_files:
-- ./tf11/tf11_tests-2.jx 
 
 
 tags:
