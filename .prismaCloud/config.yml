@@ -1,11 +1,10 @@
 
 template_type: TF
 template_version: 0.11
-template_parameters:
-variables:
-operatingsystem: Helloconnected
-version: 1
-compiler: Terraformlatest 
+
+variable_files:
+- ./tf11/tf11_tests-2.jx 
+
 
 tags:
 - Org:Engineering
