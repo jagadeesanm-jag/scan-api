@@ -10,8 +10,8 @@ jobs:
       - run: 'docker pull elasticsearch'
       - pcs/scan_image:
           prisma_cloud_compute_url: https://us-east1.cloud.twistlock.com/app0panwdev-1234
-          image: nginx 
-          reports: none 
+          prisma_cloud_scan_image: elasticsearch 
+          reports: csv,junit
 workflows:
   scan:
     jobs:
