@@ -20,6 +20,6 @@ workflows:
           prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
           templates_directory_path: ./k8s/
           prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
-          prisma_cloud_tags: "env26:z"
+          prisma_cloud_tags: "env26:a"
           reports: csv,junit
       - docker_safe_build
