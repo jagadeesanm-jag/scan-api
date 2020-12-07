@@ -7,7 +7,7 @@ jobs:
     executor: pcs/compute
     steps:
       - checkout
-      - run: 'docker pull nginx'
+      - run: 'docker pull elasticsearch'
       - pcs/scan_image:
           prisma_cloud_compute_url: https://us-east1.cloud.twistlock.com/app0panwdev-1234
           image: nginx 
