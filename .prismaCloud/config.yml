@@ -1,9 +1,5 @@
 template_type: CFT
 template_version: 12.0
-cft_parameters:
-variables:
- key1 : value1
- key2 : value2
 tags:
 - Org:Engineering
 - Team:Shift_Left
