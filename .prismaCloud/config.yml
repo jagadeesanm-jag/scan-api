@@ -1,6 +1,6 @@
 
-template_type: TF
-
+template_type: CFT
+template_version: 12.0
 tags:
 - Org:Engineering
 - Team:Shift_Left
