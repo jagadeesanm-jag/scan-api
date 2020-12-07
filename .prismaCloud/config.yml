@@ -1,15 +1,6 @@
 
 template_type: TF
 
-
-template_parameters:
-variables:
-  key1 : value1
-  key2 : value2
-variable_files:
- - ./filepath/filename1
- - ./filepath/filename2
-
 tags:
 - Org:Engineering
 - Team:Shift_Left
