@@ -10,6 +10,7 @@ jobs:
       - run: 'docker pull nginx'
       - pcs/scan_image:
           prisma_cloud_compute_url: https://staging-consoles.cloud.twistlock.com/aws-singapore-961095203
+          prisma_cloud_compute_username: f53b0f1a-3154-411c-8f13-ec9939c7a417 
           prisma_cloud_scan_image: nginx
           reports: csv,junit
 workflows:
