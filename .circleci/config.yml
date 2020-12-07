@@ -7,10 +7,10 @@ jobs:
     executor: pcs/compute
     steps:
       - checkout
-      - run: 'docker pull elasticsearch'
+      - run: 'docker pull nginx'
       - pcs/scan_image:
-          prisma_cloud_compute_url: https://us-east1.cloud.twistlock.com/console123 
-          prisma_cloud_scan_image: elasticsearch 
+          prisma_cloud_compute_url: https://staging-consoles.cloud.twistlock.com/aws-singapore-961095203 
+          prisma_cloud_scan_image: nginx
           reports: csv,junit
 workflows:
   scan:
@@ -21,3 +21,4 @@ workflows:
           prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
           prisma_cloud_tags: "env26:z"
           reports: csv,junit
+      - docker_safe_build
