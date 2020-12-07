@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: 'docker pull elasticsearch'
       - pcs/scan_image:
-          prisma_cloud_compute_url: https://us-east1.cloud.twistlock.com/app0panwdev-1234
+          prisma_cloud_compute_url: https://us-east1.cloud.twistlock.com/console123 
           prisma_cloud_scan_image: elasticsearch 
           reports: csv,junit
 workflows:
