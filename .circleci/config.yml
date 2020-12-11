@@ -21,5 +21,6 @@ workflows:
           templates_directory_path: ./k8s/
           prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
           prisma_cloud_tags: "env26:a"
+          prisma_cloud_asset_name: "CircleCI-SCANAPI"
           reports: csv,junit
       - docker_safe_build
