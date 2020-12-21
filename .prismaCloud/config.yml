@@ -3,9 +3,10 @@ template_version: 12.0
 
 
 template_parameters:
-variables:
-  key1:value1 
-
+  variables:
+    operatingsystem: Helloconnected
+    version: 1
+    compiler: Terraformlatest
 tags:
 - Org:Engineering
 - Team:Shift_Left
