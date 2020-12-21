@@ -20,7 +20,7 @@ workflows:
           prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io
           templates_directory_path: ./
           prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
-          prisma_cloud_tags: "env26:a","teamb1:ball1"
+          prisma_cloud_tags: env26:a,teamb1:ball1
           prisma_cloud_asset_name: "CircleCI-SCANAPI"
           reports: csv,junit
       - docker_safe_build
