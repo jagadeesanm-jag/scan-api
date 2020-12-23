@@ -1,10 +1,10 @@
-template_type: TF
-template_version:0.9 
+template_type: CFT
+template_version: 0.9 
 
 
 template_parameters:
   variables:
-    operatingsystem:Helloconnected
+    operatingsystem: Helloconnected
     version: 1
     compiler: Terraformlatest
 tags:
