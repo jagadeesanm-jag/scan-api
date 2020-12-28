@@ -1,4 +1,4 @@
-template_type: TF 
+template_type: CTF 
 template_version: 0.9 
 
 
@@ -7,6 +7,9 @@ template_parameters:
     operatingsystem: Helloconnected
     version: 1
     compiler: Terraformlatest
+  variable_files:
+  - ./cft_variable/CFT_variable_files/cft_variables.json
+  
 tags:
 - Org:Engineering
 - Team:Shift_Left
