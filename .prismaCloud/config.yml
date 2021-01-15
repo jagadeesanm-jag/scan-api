@@ -10,7 +10,7 @@ template_parameters:
     operatingsystem: Helloconnected
     version: 1
     compiler: Terraformlatest
-    scanPlanFilesOnly: false
+    scanPlanFilesOnly: True 
   
 tags:
 - Org:Engineering
