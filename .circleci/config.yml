@@ -17,7 +17,7 @@ workflows:
   scan:
     jobs:
       - pcs/scan_iac:
-          prisma_cloud_api_url: https://apik8stage.k8s.prismacloud.io/
+          prisma_cloud_api_url: https://apik8stage.k8s.prismacloud1.io/
           templates_directory_path: ./
           prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
           prisma_cloud_tags: env26:a,teamb1:ball1,teamb2:ball2,arn:aws:iam:::349006084872,en29:hello,sample1:f,key1:A,key3:Iam\nking
