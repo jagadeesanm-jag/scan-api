@@ -1,6 +1,9 @@
+version: 2.1
 template_type: TF
+template_version: 0.9 
 
 template_012_parameters:
+ - root_module: ./tfplan/terraform12module/
   variable_files:
     - ./tfplan/terraform12module/smelks.tfvars
   
@@ -9,6 +12,7 @@ template_parameters:
     operatingsystem: Helloconnected
     version: 1
     compiler: Terraformlatest
+    scanPlanFilesOnly: True
   
 tags:
 - Org:Engineering
