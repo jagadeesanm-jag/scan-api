@@ -2,7 +2,7 @@ template_type: TF
 template_version: 0.9 
 
 template_012_parameters:
-  - root_module: ./tfplan/terraform12module/
+   - root_module: ./tfplan/terraform12module/
   variable_files:
     - ./tfplan/terraform12module/smelks.tfvars
   
