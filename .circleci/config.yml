@@ -1,21 +1,26 @@
 version: 2.1
-template_type: TF
-template_version: 0.9 
+orbs:
+  pcs: pcs_sl_dev/devops_security@dev:first
 
-template_012_parameters:
-  variable_files:
-    - ./tfplan/terraform12module/smelks.tfvars
-  
-template_parameters:
-  variables:
-    operatingsystem: Helloconnected
-    version: 1
-    compiler: Terraformlatest
-    scanPlanFilesOnly: True
-  
-tags:
-- Org:Engineering
-- Team:Shift_Left
-- env1:securityAudit
-- env26:z
-- env21:jags
+jobs:
+  docker_safe_build:
+    executor: pcs/compute
+    steps:
+      - checkout
+      - run: 'docker pull nginx'
+      - pcs/scan_image:
+          prisma_cloud_compute_url: https://staging-consoles.cloud.twistlock.com/aws-singapore-961095203
+          prisma_cloud_compute_username: jmurugesan@paloaltonetworks.com 
+          prisma_cloud_scan_image: nginx
+          reports: csv,junit
+workflows:
+  scan:
+    jobs:
+      - pcs/scan_iac:
+          prisma_cloud_api_url: https://apik8stage.k8s.prismacloud1.io/
+          templates_directory_path: ./
+          prisma_cloud_failure_criteria: High:1,Medium:2,Low:6
+          prisma_cloud_tags: env26:a,teamb1:ball1,teamb2:ball2,arn:aws:iam:::349006084872,en29:hello,sample1:f,key1:A,key3:Iam\nking
+          prisma_cloud_asset_name: "CircleCI-SCANAPI"
+          reports: csv,junit
+      - docker_safe_build
